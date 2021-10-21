@@ -1,4 +1,4 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/ea/Mcdonalds_France_2009_logo.svg/1138px-Mcdonalds_France_2009_logo.svg.png" width="200"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://www.creads.com/wp-content/uploads/2021/05/header-2-10.png" width="400"></a></p>
 
 <p align="center">
 <a href="#"><img src="https://img.shields.io/badge/Contributors-2-green?style=plastic&logo=github" alt="Contributors"></a>
