@@ -1,10 +1,10 @@
-<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://raw.githubusercontent.com/laravel/art/master/logo-lockup/5%20SVG/2%20CMYK/1%20Full%20Color/laravel-logolockup-cmyk-red.svg" width="400"></a></p>
+<p align="center"><a href="https://laravel.com" target="_blank"><img src="https://upload.wikimedia.org/wikipedia/fr/thumb/e/ea/Mcdonalds_France_2009_logo.svg/1138px-Mcdonalds_France_2009_logo.svg.png" width="200"></a></p>
 
 <p align="center">
-<a href="https://travis-ci.org/laravel/framework"><img src="https://travis-ci.org/laravel/framework.svg" alt="Build Status"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/dt/laravel/framework" alt="Total Downloads"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/v/laravel/framework" alt="Latest Stable Version"></a>
-<a href="https://packagist.org/packages/laravel/framework"><img src="https://img.shields.io/packagist/l/laravel/framework" alt="License"></a>
+<a href="#"><img src="https://img.shields.io/badge/Contributors-2-green?style=plastic&logo=github" alt="Contributors"></a>
+<a href="#"><img src="https://img.shields.io/badge/Version-0.0.1-green?style=plastic" alt="Version"></a>
+<a href="#"><img src="https://img.shields.io/badge/Deploy-No-red?style=plastic" alt="Deploy"></a>
+<a href="#"><img src="https://img.shields.io/badge/Branches-2-white?style=plastic" alt="Branches"></a>
 </p>
 
 ## About
