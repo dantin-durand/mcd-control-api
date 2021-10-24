@@ -16,7 +16,7 @@ class TaskCategoriesRemark extends Model
     ];
 
 
-    public function taskCategorie()
+    public function categorie()
     {
         return $this->belongsTo(TaskCategories::class);
     }

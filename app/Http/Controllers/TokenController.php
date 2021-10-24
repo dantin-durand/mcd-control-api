@@ -72,7 +72,6 @@ class TokenController extends Controller
 
     public function account(Request $request)
     {
-
         return response()->json([
             $request->user()
         ], 200);

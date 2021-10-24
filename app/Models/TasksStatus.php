@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class TasksHistory extends Model
+class TasksStatus extends Model
 {
     use HasFactory;
 
@@ -15,12 +15,12 @@ class TasksHistory extends Model
         'tasks_id',
     ];
 
-    public function taskSession()
+    public function session()
     {
         return $this->belongsTo(TasksSessions::class);
     }
 
-    public function taskInfo()
+    public function info()
     {
         return $this->belongsTo(Tasks::class);
     }

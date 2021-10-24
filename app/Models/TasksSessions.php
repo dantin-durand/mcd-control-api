@@ -13,12 +13,12 @@ class TasksSessions extends Model
         'currentSession',
     ];
 
-    public function tasksSaved()
+    public function tasks()
     {
-        return $this->hasMany(TasksHistory::class);
+        return $this->hasMany(TasksStatus::class);
     }
 
-    public function remarkSaved()
+    public function remark()
     {
         return $this->hasMany(TaskCategoriesRemark::class);
     }

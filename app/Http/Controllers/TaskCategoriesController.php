@@ -3,28 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Models\TaskCategories;
+use App\Models\TaskCategoriesRemark;
 use App\Models\TasksSessions;
 use Illuminate\Http\Request;
 
 class TaskCategoriesController extends Controller
 {
-    /**
-     * Display a listing of the resource.
-     *
-     * @return \Illuminate\Http\Response
-     */
+
     public function index()
     {
-        //
+        $categories = TaskCategories::all();
+
+        return response()->json(["categories" => $categories], 200);
     }
 
-
-    /**
-     * Store a newly created resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @return \Illuminate\Http\Response
-     */
     public function store(Request $request)
     {
         $request->validate([
@@ -36,55 +28,50 @@ class TaskCategoriesController extends Controller
             'remark' => "test",
         ]);
 
-        response()->json(["taskCategorie" => $taskCategorie], 200);
+        return response()->json(["taskCategorie" => $taskCategorie], 200);
     }
 
-    /**
-     * Display the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
     public function show(Request $request)
     {
-        $test = TasksSessions::where('id', $request->id)
-            ->first();
+        $taskCategorie = TaskCategories::find($request->id);
 
-        dd($test->tasksSaved);
-        return response()->json([$test], 200);
+
+        if ($taskCategorie) {
+            return response()->json(["categorie" => $taskCategorie], 200);
+        } else {
+            return response()->json(["message" => "categorie not found", "code" => "CATEGORIE_SHOW_NOT_FOUND"], 404);
+        }
     }
 
-    /**
-     * Show the form for editing the specified resource.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function edit($id)
+    public function update(Request $request)
     {
-        //
+        $request->validate([
+            'title' => 'required',
+        ]);
+
+        $taskCategorie = TaskCategories::find($request->id);
+
+        if ($taskCategorie) {
+            $taskCategorie->update([
+                'title' => $request->title,
+            ]);
+
+            return response()->json(["message" => "categorie updated", "categorie" => $taskCategorie], 200);
+        } else {
+            return response()->json(["message" => "categorie not found", "code" => "CATEGORIE_UPDATE_NOT_FOUND"], 404);
+        }
     }
 
-    /**
-     * Update the specified resource in storage.
-     *
-     * @param  \Illuminate\Http\Request  $request
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function update(Request $request, $id)
+    public function destroy(Request $request)
     {
-        //
-    }
 
-    /**
-     * Remove the specified resource from storage.
-     *
-     * @param  int  $id
-     * @return \Illuminate\Http\Response
-     */
-    public function destroy($id)
-    {
-        //
+        $taskCategorie = TaskCategories::find($request->id);
+
+        if ($taskCategorie) {
+            $taskCategorie->delete();
+            return response()->json(["message" => "categorie deleted", "categorie" => $taskCategorie], 200);
+        } else {
+            return response()->json(["message" => "categorie not found", "code" => "CATEGORIE_DELETE_NOT_FOUND"], 404);
+        }
     }
 }
