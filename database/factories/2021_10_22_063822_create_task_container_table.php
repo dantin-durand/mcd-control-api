@@ -15,6 +15,7 @@ class CreateTaskContainerTable extends Migration
     {
         Schema::create('task_container', function (Blueprint $table) {
             $table->id();
+            $table->longText('remark');
             $table->timestamps();
         });
     }
