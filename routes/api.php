@@ -17,8 +17,8 @@ use Illuminate\Support\Facades\Route;
 
 Route::post('/auth/login', [TokenController::class, 'login']);
 
+Route::post('/auth/register', [TokenController::class, 'register']);
 Route::middleware('auth:sanctum')->group(function () {
-    Route::middleware('role:ADMIN')->post('/auth/register', [TokenController::class, 'register']);
 });
 
 /**
