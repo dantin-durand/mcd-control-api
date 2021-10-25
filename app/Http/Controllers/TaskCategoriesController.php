@@ -64,7 +64,6 @@ class TaskCategoriesController extends Controller
 
     public function destroy(Request $request)
     {
-
         $taskCategorie = TaskCategories::find($request->id);
 
         if ($taskCategorie) {
